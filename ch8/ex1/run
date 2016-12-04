@@ -1,0 +1,7 @@
+javac Arrays.java
+javah -jni Arrays
+gcc -dynamiclib Arrays.cpp -I/System/Library/Frameworks/JavaVM.framework/Headers -o libArrays.jni$
+java -Djava.library.path=. Arrays
+
+
+

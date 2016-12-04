@@ -1,0 +1,6 @@
+javac Calc.java
+javah -jni Calc
+gcc -dynamiclib Calc.cpp -I/System/Library/Frameworks/JavaVM.framework/Headers -o libCalc.jnilib
+java -Djava.library.path=. Calc
+
+

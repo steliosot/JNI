@@ -1,0 +1,4 @@
+javac OneToOne1.java
+javah -jni OneToOne1
+gcc -dynamiclib OneToOne1.cpp -I/System/Library/Frameworks/JavaVM.framework/Headers -o libOneToOne1.jnilib
+java -Djava.library.path=. OneToOne1

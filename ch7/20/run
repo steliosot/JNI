@@ -1,0 +1,6 @@
+javac Strings.java
+javah -jni Strings
+gcc -dynamiclib Strings.cpp -I/System/Library/Frameworks/JavaVM.framework/Headers -o libStrings.jnilib
+java -Djava.library.path=. Strings
+
+

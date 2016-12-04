@@ -1,0 +1,4 @@
+javac CatchThrow1.java
+javah -jni CatchThrow1
+gcc -dynamiclib CatchThrow1.cpp -I/System/Library/Frameworks/JavaVM.framework/Headers -o libCatchThrow1.jnilib
+java -Djava.library.path=. CatchThrow1
